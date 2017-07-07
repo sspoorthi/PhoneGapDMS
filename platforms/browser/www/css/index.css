@@ -1,0 +1,151 @@
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #0f3575 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #0f3575 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #0f3575 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #0f3575),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the logo image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 5px 0 5px 0;
+}
+
+/* logo image */
+img.logo {
+    position:center;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:100px;                   /* text area height */
+    width:100px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+#systemAdmin {
+background-image: url("img/systemAdmin.jpg");
+background-repeat: no-repeat;
+list-style-type: none;
+height: 42px;
+}
+
+#contacts {
+background-image: url("img/contacts.png");
+background-repeat: no-repeat;
+list-style-type: none;
+height: 42px;
+}
+
+nav ul li {
+	float: left; margin: 0 20px 0 0;
+}
+
+nav ul li a {
+	display: block; width: 120px; height: 120px;
+	background-image: url(icons.png); background-repeat: no-repeat;
+}
+
+nav ul li:nth-child(1) a {
+	background-color: #5bb2fc;
+	background-position: 28px 28px;
+}
+
+nav ul li:nth-child(2) a {
+	background-color: #5bb2fc;
+	background-position: 28px -96px;
+}
+		
+nav ul li a span {
+	font: 50px "Dosis", sans-serif; text-transform: uppercase; 
+	position: absolute; left: 580px; top: 29px;
+	display: none;
+}
+
+nav ul li a:hover span {
+	display: block;
+}
+				
