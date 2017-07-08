@@ -2,3 +2,4 @@
 .DS_Store
 platforms
 hooks
+node_modules
