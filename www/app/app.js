@@ -1,5 +1,5 @@
 angular.module("dmsApp", ['ngRoute'])
-    .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+    .config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/Login', {
                 templateUrl: 'app/views/app-login.html',
@@ -7,18 +7,25 @@ angular.module("dmsApp", ['ngRoute'])
             })
             .when('/Home', {
                 templateUrl: 'app/views/app-main-page.html',
-                controller: 'mainController'
+                controller: 'homeController'
             })
             .otherwise({
                 redirectTo: '/Login'
             });
-    }])
-    .controller('indexController',['$scope','$location','$rootScope',function($scope,$location,$rootScope){
+    })
+    .controller('indexController', function ($scope, $location, $rootScope) {
         $location.path('/Login');
-    }])
-    .controller('mainController',[])
-    .controller('loginController',['$scope','$location','$rootScope',function($scope,$location,$rootScope){
-        $scope.doLogin=function(){
-            alert("login");
+    })
+    .controller('homeController', [])
+    .controller('loginController', ['appFactory', function ($scope, $location, $rootScope, appFactory) {
+        $scope.doLogin = function () {
+            appFactory.validateLogin();
         };
+    }])
+    .factory('appFactory', ['$http', ($http) => {
+        return {
+            validateLogin: () => {
+                alert(1)
+            }
+        }
     }]);

@@ -1,0 +1,17 @@
+{
+    "users":[
+        {
+            "id":"gowtham",
+            "name":"Gowtham Karanam",
+            "role":"admin",
+            "email":"gowtham.karanam@gmail.com"
+        },
+        {
+            "id":"spoorthi",
+            "name":"Spoorthi Sham",
+            "role":"admin",
+            "email":"spoorthi.sham@gmail.com"
+        }
+    ]
+}
+
