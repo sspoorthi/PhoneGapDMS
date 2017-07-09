@@ -1,9 +1,5 @@
 /* Bordered form */
 
-form {
-    border: 3px solid #f1f1f1;
-}
-
 body {
     -webkit-touch-callout: none;
     /* prevent callout to copy image, etc when tap to hold */
@@ -208,20 +204,6 @@ nav ul li a:hover span {
     margin-bottom: 6%;
     top: 32.6%;
 }
-
-.login-loader {
-    width: 100%;
-    height: 20px;
-    top: 38.6%;
-    opacity: 0;
-    position: absolute;
-    text-align: center;
-    img {
-        width: 20px;
-        margin: 0 auto;
-    }
-}
-
 .login-form {
     position: absolute;
     bottom: 0;
@@ -237,4 +219,13 @@ nav ul li a:hover span {
     left: 50%;
     margin-left: -100px;
     top: 36px;
+}
+.login-logo {
+	margin: auto;
+	top: 14.60%;
+	position: absolute;
+	height: 18%;
+	text-align: center;
+	display: block;
+	width: 100%;
 }

@@ -18,5 +18,7 @@ angular.module("dmsApp", ['ngRoute'])
     }])
     .controller('mainController',[])
     .controller('loginController',['$scope','$location','$rootScope',function($scope,$location,$rootScope){
-        alert(1);
+        $scope.doLogin=function(){
+            alert("login");
+        };
     }]);
