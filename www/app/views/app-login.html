@@ -2,6 +2,7 @@
     <div class="login-container">
         <div class="login-logo">
             <img alt="Logo Philips" class="img-responsive" src="img/logo-philips.svg">
+			</br><h2 style="color:white">DMS</h1>
         </div>
         <!--<img alt="Logo DMS" class="login-top login-title" src="img/logo-dms.svg">-->
     </div>
@@ -9,7 +10,8 @@
         <form name="login" ng-submit="doLogin()" novalidate>
             <div class="login-form-area">
                 <input class="form-control input-lg" type="text" placeholder="Username" ng-model="username" autocomplete="off" required/>
-                <button class="btn btn-lg btn-primary btn-block" data-icon="patientviewing" type="submit">Login</button>
+				<input class="form-control input-lg" type="password" placeholder="Password" ng-model="password" autocomplete="off" required/>
+                <button class="pt-button green" data-icon="patientviewing" type="submit">Login</button>
             </div>
         </form>
     </div>
