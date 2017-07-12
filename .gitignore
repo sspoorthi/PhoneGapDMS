@@ -1,5 +1,31 @@
-# OS X
-.DS_Store
+# android
+platforms/android/assets/www
+platforms/android/bin
+platforms/android/gen
+platforms/android/local.properties
+platforms/android/ant-build
+platforms/android/ant-gen
+platforms/android/CordovaLib/ant-build
+platforms/android/CordovaLib/ant-gen
+platforms/android/CordovaLib/bin
+platforms/android/CordovaLib/gen
+platforms/android/CordovaLib/local.properties
 platforms
-hooks
+#node
 node_modules
+npm-debug.log
+
+#bower
+bower_components
+
+#res
+resources/signing
+
+#js
+www/lib
+www/dist
+
+#css
+www/css
+#vendor
+www/vendor
