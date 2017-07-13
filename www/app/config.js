@@ -1,7 +1,7 @@
-import loginController from "./components/controllers/loginController";
-import homeController from "./components/controllers/homeController";
+import {loginController} from "./components/controllers/loginController";
+import {homeController} from "./components/controllers/homeController";
 
-export default function config($routeProvider, $locationProvider) {
+export function config($routeProvider, $locationProvider) {
     $routeProvider
         .when('/Login', {
             templateUrl: 'app/components/views/app-login.html',

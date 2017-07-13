@@ -1,6 +1,6 @@
 import angular from 'angular';
 import angularRoute from 'angular-route';
-import config from './config';
+import {config} from './config';
 import {appFactory} from './components/factories/appFactory';
 import {appService} from './components/services/dummyService';
 // controllers

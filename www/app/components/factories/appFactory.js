@@ -1,10 +1,13 @@
-export default function appFactory($location, $http) {
+export  function appFactory($http) {
+    "ngInject";
     return {
-        validateLogin: () => {
-            $http.get('././data/users.json').then((res) => {
-                console.log(res);
+        validateLogin: (userData) => {
+           return $http.get('././data/users.json').then((res) => {
+                angular.forEach(userData,(v,k)=>{
+                    console.log(v);
+                    console.log(k);
+                });
             });
-            $location.path('/Home');
         }
     };
 }

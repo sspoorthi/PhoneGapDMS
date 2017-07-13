@@ -1,3 +1,3 @@
-export default function homeController() {
+export   function homeController() {
 
 }

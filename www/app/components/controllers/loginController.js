@@ -1,8 +1,18 @@
 
-export default function loginController($scope, $location, $rootScope) {
+export  function loginController($scope, $location, $rootScope,appFactory) {
+    "ngInject";
+    $scope.errors= $scope.errors || {};
+    $scope.doLogin = doLogin;
     
-    $scope.doLogin = function () {
-        //appFactory.validateLogin();
-        alert(1);
+    function doLogin () {
+        let userDetails = {
+            userName: $scope.username,
+            password: $scope.password
+        };
+        appFactory.validateLogin(userDetails).then(res=>{
+
+        });
+        i
+        
     };
 }
