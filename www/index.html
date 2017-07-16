@@ -4,17 +4,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <link rel="stylesheet" type="text/css" href="css/index.css" />
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
   <title>Philips DMS</title>
 </head>
 
 <body>
-  <div  ng-app="dmsApp"  >
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <a class="brand" style="margin: 0; float: none;" href="#">
+         <!-- <img src="img/logo-philips.png" class="img-responsive" alt="philipsLogo" /> -->
+        </a>
+    </div>
+  </nav>
+  <div ng-app="dmsApp" class="container">
     <div ng-view></div>
   </div>
+
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="dist/bundle.js"></script>
 </body>
+<footer>
+  <div>
+    &copy; Philips Healthcare 2017.
+  </div>
+</footer>
 
 </html>
