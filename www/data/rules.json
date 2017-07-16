@@ -1,0 +1,23 @@
+{
+    "rules": [{
+        "role": "nurse",
+        "rules": [{
+                "id": 1,
+                "text": "Inform Staff about the disaster"
+            },
+            {
+                "id": 2,
+                "text": "Take care of patients"
+            }
+        ]
+    }, {
+        "role": "doctor",
+        "rules": [{
+            "id": 1,
+            "text": "Inform Staff about the disaster- Doctor"
+        }, {
+            "id": 2,
+            "text": "Take care of patients- Doctor"
+        }]
+    }]
+}

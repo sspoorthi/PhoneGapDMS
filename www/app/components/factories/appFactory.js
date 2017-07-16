@@ -8,6 +8,9 @@ export  function appFactory($http) {
                     console.log(k);
                 });
             });
+        },
+        getRules:()=>{
+            return $http.get('././data/rules.json');
         }
     };
 }

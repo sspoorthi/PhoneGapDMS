@@ -11,6 +11,7 @@ import {loginController} from './components/controllers/loginController';
 
 // directives
 import {appHeader} from './components/directives/header.directive';
+import {rulesNavigator} from './components/directives/rules-navigator.directive';
 
 
 angular.module('dmsApp', ['ngRoute'])
@@ -20,4 +21,5 @@ angular.module('dmsApp', ['ngRoute'])
     .factory("appFactory",appFactory)
     .service("appService",appService)
     .directive("appHeader",appHeader)
+    .directive("rulesNavigator",rulesNavigator)
     .name;
