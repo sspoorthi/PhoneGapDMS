@@ -3,12 +3,14 @@
         {
             "id":"gowtham",
             "name":"Gowtham Karanam",
+            "password": "gkaranam",
             "role":"admin",
             "email":"gowtham.karanam@gmail.com"
         },
         {
             "id":"spoorthi",
             "name":"Spoorthi Sham",
+            "password": "ssham",
             "role":"admin",
             "email":"spoorthi.sham@gmail.com"
         }

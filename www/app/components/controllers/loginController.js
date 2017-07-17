@@ -10,7 +10,11 @@ export  function loginController($scope, $location, $rootScope,appFactory) {
             password: $scope.password
         };
         appFactory.validateLogin(userDetails).then(res=>{
-            $location.path('/Home');
+            if (res) {
+                $location.path('/Home');
+            } else {
+                $location.path('/Login');
+            }
         });
     };
 }
