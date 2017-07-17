@@ -1,5 +1,6 @@
 import {loginController} from "./components/controllers/loginController";
 import {homeController} from "./components/controllers/homeController";
+import {rulesNavController} from "./components/controllers/rulesNavController";
 
 export function config($routeProvider, $locationProvider) {
     $routeProvider
@@ -10,6 +11,10 @@ export function config($routeProvider, $locationProvider) {
         .when('/Home', {
             templateUrl: 'app/components/views/app-main-page.html',
             controller: homeController
+        })
+        .when('/Rules',{
+            templateUrl:'app/components/views/rules-navigator.html',
+            controller:rulesNavController
         })
         .otherwise({
             redirectTo: '/Login'

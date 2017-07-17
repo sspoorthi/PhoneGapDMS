@@ -1,3 +1,5 @@
-<div>
-    <textarea ng-model ="ruleText"></textarea>
+<div class="input-group">
+    <span class="input-group-addon btn btn-primary glyphicon glyphicon-arrow-left" ng-click="showPreviousRule()"> </span>
+    <textarea class="form-control custom-control" rows="12" style="resize:none" readonly ng-model="ruleText" ></textarea>     
+    <span class="input-group-addon btn btn-primary glyphicon glyphicon-arrow-right" ng-click="showNextRule()"></span>
 </div>

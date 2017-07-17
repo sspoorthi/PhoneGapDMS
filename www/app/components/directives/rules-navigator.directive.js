@@ -1,4 +1,5 @@
-export function rulesNavigator() {
+export function rulesNavigator($scope,$location) {
+    "ngInject";
     let directive = {
         restrict: 'E',
         transclude: true,
@@ -7,5 +8,4 @@ export function rulesNavigator() {
 
         },
     };
-    return directive;
 }

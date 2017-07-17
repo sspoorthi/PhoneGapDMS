@@ -4,7 +4,7 @@ import angular from 'angular';
 import angularRoute from 'angular-route';
 import {config} from './config';
 import {appFactory} from './components/factories/appFactory';
-import {appService} from './components/services/dummyService';
+import {appService} from './components/services/appService';
 // controllers
 import {homeController} from './components/controllers/homeController';
 import {loginController} from './components/controllers/loginController';
