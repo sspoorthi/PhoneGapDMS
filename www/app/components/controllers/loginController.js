@@ -14,7 +14,11 @@ export  function loginController($scope, $location, $rootScope,appFactory,appSer
         $scope.appService.password=$scope.password;
         $scope.appService.userRole="nurse";
         appFactory.validateLogin(userDetails).then(res=>{
-            $location.path('/Home');
+            if (res) {
+                $location.path('/Home');
+            } else {
+                $location.path('/Login');
+            }
         });
     };
 }
