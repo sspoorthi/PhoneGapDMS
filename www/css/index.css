@@ -210,8 +210,8 @@ footer {
     border-top: 1px solid #E7E7E7;
     text-align:center;
     padding:20px;
-   /* just for demo */ 
-  
+   /* just for demo */
+
     position: absolute;
     left: 0;
     bottom: 0;
@@ -232,4 +232,11 @@ footer {
 
 .button-wrapper .btn {
     margin-bottom:15px;
+}
+
+.login-form {
+  background-color: #edeff1;
+  padding: 24px 23px 20px;
+  position: relative;
+  border-radius: 6px;
 }
