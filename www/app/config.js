@@ -16,6 +16,10 @@ export function config($routeProvider, $locationProvider) {
             templateUrl:'app/components/views/rules-navigator.html',
             controller:rulesNavController
         })
+        .when('/IncidentForm', {
+            templateUrl: 'app/components/views/incident-form.html'
+            // controller: incidentController
+        })
         .otherwise({
             redirectTo: '/Login'
         });

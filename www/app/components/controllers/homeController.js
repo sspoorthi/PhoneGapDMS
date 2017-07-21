@@ -1,6 +1,7 @@
 export   function homeController($scope,$location,appFactory,appService) {
 "ngInject";
     $scope.populateRules = populateRules;
+    $scope.showIncidentForm = showIncidentForm;
     $scope.appService=appService;
     function populateRules(){
         appFactory.getRules().then(res=>{
@@ -15,5 +16,9 @@ export   function homeController($scope,$location,appFactory,appService) {
                 }
             }
         });
+    }
+
+    function showIncidentForm() {
+         $location.path('/IncidentForm');
     }
 }
