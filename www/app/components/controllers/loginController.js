@@ -10,12 +10,13 @@ export  function loginController($scope, $location, $rootScope,appService) {
             userName: $scope.username,
             password: $scope.password
         };
-        $scope.appService.userNmae=$scope.username;
+        $scope.appService.userName=$scope.username;
         $scope.appService.password=$scope.password;
-        $scope.appService.userRole="nurse";
+        //$scope.appService.userRole="nurse";
         appService.validateLogin(userDetails).then(res=>{
             if (res) {
                 console.log(res);
+                $scope.appService.userRole=res.role;
                 $location.path('/Home');
             } else {
                 $location.path('/Login');

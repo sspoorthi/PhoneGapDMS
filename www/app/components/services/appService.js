@@ -7,7 +7,7 @@ export   function appService($http){
               for (var index = 0; index < res.data.users.length; index++) {
                   if (angular.equals(userData.userName, res.data.users[index].id)
                   && angular.equals(userData.password, res.data.users[index].password)) {
-                      return true;
+                      return res.data.users[index];
                   }
               }
               return false;
