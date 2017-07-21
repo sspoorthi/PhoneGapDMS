@@ -1,134 +1,76 @@
 {
 	"protocols":[
 		{
-			// first protocol - incident commander
-			role:"incident_commander",
-			state:"incident_reported",
-			actions:[{
-				prioirty: 0,
-				step-msg: "update other members of command nucleus",
-				step-id: "INFORM_CN"
+			"role":"incident_commander",
+			"state":"incident_reported",
+			"actions":[{
+				"prioirty": 0,
+				"step-msg": "Check with local authorities to verify the disaster and obtain additional information.",
+				"step-id": "VERIFY"
 			},
 			{
-				prioirty: 1,
-				step-msg: "confirm about the type of incident, location, number and type of casualties to decide on activating the disaster phase",
-				-- bring up emergency contacts based on disaster (hospital security, fire-station, airport)
-				step-id: "CONFIRM_DISASTER"
+				"prioirty": 1,
+				"step-msg": "confirm about the type of incident, location, number and type of casualties to decide on activating the disaster phase.",
+				"step-id": "CONFIRM_DISASTER"
 			},
 			{
-				prioirty: 2,
-				step-msg: "Do you want to confirm activation of code yellow",
-				step-id: "ACTIVATE_CODE"
+				"prioirty": 2,
+				"step-msg": "Do you want to confirm activation of code yellow",
+				"step-id": "ACTIVATE_CODE"
+			},
+			]
+		},
+		{
+			"role":"incident_commander",
+			"state":"disaster_phase",
+			"actions":[{
+				"prioirty": 0,
+				"step-msg": "Ask for help from local police and volunteer organizations as deemed necessary.",
+				"step-id": ""
 			},
 			{
-				prioirty: 3,
-				step-msg: ,
-				step-id:
+				"prioirty": 1,
+				"step-msg": "",
+				"step-id": ""
+			},
+			{
+				"prioirty": 2,
+				"step-msg": "",
+				"step-id": ""
 			}
 			]
 		},
 		{
-			// second protocol - incident commander
-			role:"incident_commander",
-			state:"disaster_phase",
-			actions:[{
-				prioirty: 0,
-				step-msg: "",
-				step-id: ""
+			"role":"chief_nursing_officer",
+			"state":"disaster_phase",
+			"actions":[{
+				"prioirty": 0,
+				"step-msg": "",
+				"step-id": ""
 			},
 			{
-				prioirty: 1,
-				step-msg: "",
-				step-id: ""
-			},
-			{
-				prioirty: 2,
-				step-msg: "",
-				step-id: ""
-			},
-			{
-				prioirty: 3,
-				step-msg: ,
-				step-id:
-			},
-			{
-				prioirty: 3,
-				step-msg: ,
-				step-id:
-			},
-			{
-				prioirty: 3,
-				step-msg: ,
-				step-id:
-			}
-			]
-		}
-		{
-			// third protocol - command nucleus
-			role:"command_nucleus",
-			state:"incident_reported",
-			actions:[{
-				prioirty: 0,
-				step-msg: "Check with local authorities to verify the disaster and obtain additional information.",
-				step-id: "VERIFY"
-			},
-			{
-				prioirty: 1,
-				step-msg: "Authorize announcement of disaster to hospital personnel",
-				step-id: "CONFIRM_DISASTER"
+				"prioirty": 1,
+				"step-msg": "",
+				"step-id": ""
 			}
 			]
 		},
 		{
-			// fourth protocol
-			role:"command_nucleus",
-			state:"disaster_phase",
-			actions:[{
-				prioirty: 0,
-				step-msg: "Ask for help from local police and volunteer organizations as deemed necessary.",
-				step-id: ""
+			"role":"pharmacy",
+			"state":"disaster_phase",
+			"actions":[{
+				"prioirty": 0,
+				"step-msg": "",
+				"step-id": ""
 			},
 			{
-				prioirty: 1,
-				step-msg: "Stay in the area of administrative offices to be available to assist, as requested/required.",
-				step-id: ""
+				"prioirty": 1,
+				"step-msg": "",
+				"step-id": ""
 			}
 			]
 		},
 		{
-			// fourth protocol
-			role:"chief_nursing_officer",
-			state:"disaster_phase",
-			actions:[{
-				prioirty: 0,
-				step-msg: "",
-				step-id: ""
-			},
-			{
-				prioirty: 1,
-				step-msg: "",
-				step-id: ""
-			}
-			]
-		},
-		{
-			// fifth protocol
-			role:"pharmacy",
-			state:"disaster_phase",
-			actions:[{
-				prioirty: 0,
-				step-msg: "",
-				step-id: ""
-			},
-			{
-				prioirty: 1,
-				step-msg: "",
-				step-id: ""
-			}
-			]
-		},
-		{
-			// sixth protocol
 			role:"ER_Head",
 			state:"disaster_phase",
 			actions:[{
