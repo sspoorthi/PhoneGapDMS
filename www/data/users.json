@@ -11,9 +11,8 @@
             "id":"spoorthi",
             "name":"Spoorthi Sham",
             "password": "ssham",
-            "role":"admin",
+            "role":"incident_commander",
             "email":"spoorthi.sham@gmail.com"
         }
     ]
 }
-

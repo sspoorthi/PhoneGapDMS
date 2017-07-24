@@ -13,8 +13,17 @@ export   function appService($http){
               return false;
           });
       },
-      getRules:()=>{
-          return $http.get('././data/rules.json');
+      getRules:(userRole, state)=>{
+          return $http.get('././data/protocols.json').then((res) => {
+            console.log(res.data);
+            for(var index = 0; index < res.data.protocols.length; index++) {
+              if (angular.equals(userRole, res.data.protocols[index].role)
+              && angular.equals(state, res.data.protocols[index].state)) {
+                return res.data.protocols[index];
+              }
+            }
+            return false;
+          });
       }
     };
 }

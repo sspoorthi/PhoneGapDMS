@@ -17,7 +17,7 @@
 				"prioirty": 2,
 				"step-msg": "Do you want to confirm activation of code yellow",
 				"step-id": "ACTIVATE_CODE"
-			},
+			}
 			]
 		},
 		{
@@ -71,22 +71,19 @@
 			]
 		},
 		{
-			role:"ER_Head",
-			state:"disaster_phase",
-			actions:[{
-				prioirty: 0,
-				step-msg: "",
-				step-id: ""
+			"role":"ER_Head",
+			"state":"disaster_phase",
+			"actions":[{
+				"prioirty": 0,
+				"step-msg": "",
+				"step-id": ""
 			},
 			{
-				prioirty: 1,
-				step-msg: "",
-				step-id: ""
+				"prioirty": 1,
+				"step-msg": "",
+				"step-id": ""
 			}
 			]
 		}
 	]
 }
-
-
-secuirty
