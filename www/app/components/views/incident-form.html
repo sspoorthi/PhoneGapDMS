@@ -1,18 +1,18 @@
 <h3>Report Incident</h3>
 <div class="input-group">
   <label>Incident</label>
-  <input type="text" class="form-control" placeholder="incident" aria-describedby="basic-addon1">
+  <input type="text" class="form-control" placeholder="Enter incident" ng-model="incident">
 </div>
 <br>
 <div class="input-group">
   <label>Description</label>
   <br>
-  <textarea placeholder="description" aria-describedby="basic-addon1" rows="5" cols="50"></textarea>
+  <textarea placeholder="Enter description" ng-model="incidentDescription" rows="5" cols="50"></textarea>
 </div>
 <br>
 <div class="input-group">
   <label>Location</label>
-  <input type="text" class="form-control" placeholder="location" aria-describedby="basic-addon1">
+  <input type="text" class="form-control" placeholder="Enter location" ng-model="incidentLocation">
 </div>
 <br>
-<button type="submit" class="btn btn-success">Report</button>
+<button type="submit" class="btn btn-success" ng-click="reportIncident()">Report</button>
