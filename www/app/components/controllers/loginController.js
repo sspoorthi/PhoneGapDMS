@@ -4,6 +4,7 @@ export  function loginController($scope, $location, $rootScope,appService) {
     $scope.errors= $scope.errors || {};
     $scope.doLogin = doLogin;
     $scope.appService = appService;
+    $scope.appService.loggedIn = false;
     function doLogin () {
         let userDetails = {
             userName: $scope.username,
