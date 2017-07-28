@@ -6,7 +6,8 @@ Checkout the project
 
 1. `npm install`
 2. `npm install -g cordova`
-3. `cordova plugin add cordova-plugin-dialogs`
+/*3. `cordova plugin add cordova-plugin-dialogs`*/
+3. `cordova platform add android`
 4. `webpack`
 
 
