@@ -5,17 +5,17 @@
 			"state":"incident_reported",
 			"actions":[{
 				"prioirty": 0,
-				"step-msg": "Check with local authorities to verify the disaster and obtain additional information.",
+				"message": "Check with local authorities to verify the disaster and obtain additional information.",
 				"step-id": "VERIFY"
 			},
 			{
 				"prioirty": 1,
-				"step-msg": "confirm about the type of incident, location, number and type of casualties to decide on activating the disaster phase.",
+				"message": "confirm about the type of incident, location, number and type of casualties to decide on activating the disaster phase.",
 				"step-id": "CONFIRM_DISASTER"
 			},
 			{
 				"prioirty": 2,
-				"step-msg": "Do you want to confirm activation of code yellow",
+				"message": "Do you want to confirm activation of code yellow",
 				"step-id": "ACTIVATE_CODE"
 			}
 			]
@@ -25,17 +25,17 @@
 			"state":"disaster_phase",
 			"actions":[{
 				"prioirty": 0,
-				"step-msg": "Ask for help from local police and volunteer organizations as deemed necessary.",
+				"message": "Ask for help from local police and volunteer organizations as deemed necessary.",
 				"step-id": ""
 			},
 			{
 				"prioirty": 1,
-				"step-msg": "",
+				"message": "",
 				"step-id": ""
 			},
 			{
 				"prioirty": 2,
-				"step-msg": "",
+				"message": "",
 				"step-id": ""
 			}
 			]
@@ -45,12 +45,22 @@
 			"state":"disaster_phase",
 			"actions":[{
 				"prioirty": 0,
-				"step-msg": "",
+				"message": "Report to Incident Command Officer",
 				"step-id": ""
 			},
 			{
 				"prioirty": 1,
-				"step-msg": "",
+				"message": "Mobilize the nursing staff to the triage and treatment area",
+				"step-id": ""
+			},
+			{
+				"prioirty": 2,
+				"message": "Identifying nursing needs",
+				"step-id": ""
+			},
+			{
+				"prioirty": 1,
+				"message": "Arrange for extra nursing and nurse aid staff",
 				"step-id": ""
 			}
 			]
@@ -60,12 +70,12 @@
 			"state":"disaster_phase",
 			"actions":[{
 				"prioirty": 0,
-				"step-msg": "",
+				"message": "",
 				"step-id": ""
 			},
 			{
 				"prioirty": 1,
-				"step-msg": "",
+				"message": "",
 				"step-id": ""
 			}
 			]
@@ -75,12 +85,52 @@
 			"state":"disaster_phase",
 			"actions":[{
 				"prioirty": 0,
-				"step-msg": "",
+				"message": "Establish the triage area.",
 				"step-id": ""
 			},
 			{
 				"prioirty": 1,
-				"step-msg": "",
+				"message": "",
+				"step-id": ""
+			}
+			]
+		},
+		{
+			"role":"security_HOD",
+			"state":"disaster_phase",
+			"actions":[{
+				"prioirty": 0,
+				"message": "Report to command centre",
+				"step-id": ""
+			},
+			{
+				"prioirty": 1,
+				"message": "Regulate entry and exit of personnel to ensure smooth functioning of the emergency services.",
+				"step-id": ""
+			},
+			{
+				"prioirty": 2,
+				"message": "Ensure ambulance and other emergency services vehicles exit and entry freely.",
+				"step-id": ""
+			},
+			{
+				"prioirty": 3,
+				"message": "Ask for local police arrangements, if required. Call 100",
+				"step-id": ""
+			},
+			{
+				"prioirty": 4,
+				"message": "Divert media to Executive Lounge.",
+				"step-id": ""
+			},
+			{
+				"prioirty": 5,
+				"message": "Divert attenders to Main Lobby area",
+				"step-id": ""
+			},
+			{
+				"prioirty": 6,
+				"message": "",
 				"step-id": ""
 			}
 			]

@@ -8,6 +8,7 @@ import {appService} from './components/services/appService';
 // controllers
 import {homeController} from './components/controllers/homeController';
 import {loginController} from './components/controllers/loginController';
+import {rulesNavController} from './components/controllers/rulesNavController';
 
 // directives
 import {appHeader} from './components/directives/header.directive';
@@ -18,6 +19,7 @@ angular.module('dmsApp', ['ngRoute'])
 	.config(config)
     .controller("homeController",homeController)
     .controller("loginController",loginController)
+		.controller("rulesNavController",rulesNavController)
     .factory("appFactory",appFactory)
     .service("appService",appService)
     .directive("appHeader",appHeader)

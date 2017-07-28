@@ -1,5 +1,9 @@
-<div class="input-group">
-    <!-- <span class="input-group-addon btn btn-primary glyphicon glyphicon-arrow-left" ng-click="showPreviousRule()"> </span> -->
+<!-- <div class="input-group">
+    <span class="input-group-addon btn btn-primary glyphicon glyphicon-arrow-left" ng-click="showPreviousRule()"> </span>
     <textarea class="form-control custom-control" rows="12" style="resize:none" readonly ng-model="ruleText" ></textarea>
     <span class="input-group-addon btn btn-primary glyphicon glyphicon-arrow-right" ng-click="showNextRule()"></span>
+</div> -->
+<div class="jumbotron">
+  <h3 class="protocol-display">{{ruleText}}</h3>
+  <a class="btn btn-primary btn-lg btn-block glyphicon glyphicon-menu-right" ng-click="showNextRule()"></a>
 </div>

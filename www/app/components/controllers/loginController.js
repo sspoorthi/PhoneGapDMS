@@ -4,8 +4,6 @@ export  function loginController($scope, $location, $rootScope,appService) {
     $scope.errors= $scope.errors || {};
     $scope.doLogin = doLogin;
     $scope.appService = appService;
-//    $scope.appService.state = "incident_reported";
-
     function doLogin () {
         let userDetails = {
             userName: $scope.username,
@@ -16,6 +14,7 @@ export  function loginController($scope, $location, $rootScope,appService) {
         $scope.appService.state = "neutral";
         appService.validateLogin(userDetails).then(res=>{
             if (res) {
+                $scope.appService.loggedIn = true;
                 console.log(res);
                 $scope.appService.userRole=res.role;
                 $location.path('/Home');

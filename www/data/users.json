@@ -11,8 +11,22 @@
             "id":"spoorthi",
             "name":"Spoorthi Sham",
             "password": "ssham",
-            "role":"incident_commander",
+            "role":"admin",
             "email":"spoorthi.sham@gmail.com"
+        },
+        {
+          "id":"pallavi",
+          "name":"pallavi",
+          "password":"123",
+          "role":"incident_commander",
+          "email":"teast123@gmail.com"
+        },
+        {
+          "id":"123",
+          "name":"123",
+          "password":"123",
+          "role":"security_HOD",
+          "email":"teast123@gmail.com"
         }
     ]
 }
