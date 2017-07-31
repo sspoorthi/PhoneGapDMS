@@ -1,0 +1,13 @@
+<div ng-controller="homeController">
+    <div class="col-xs-5 panel-body">
+        <ul class="list-group">
+          <h4>Contacts:</h4>
+            <input class="form-control" placeholder="Search" type="text" ng-model="searchText">
+            <contact class="list-group-item" ng-repeat="contact in contacts | orderBy: 'name' | filter: searchText ">
+                <a ng-href="#/{{contacts.indexOf(contact)}}" ng-click="makeCall(contact.phone)">
+                    {{contact.name}}
+                </a>
+            </contact>
+        </ul> 
+      </div>
+</div>

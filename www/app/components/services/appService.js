@@ -33,6 +33,11 @@ export   function appService($http){
       },
       getRuleObject:()=>{
         return ruleObject;
+      },
+      getContacts: () => {
+        return $http.get('././data/contacts.json').then((res) => {
+          return res.data.contactList;
+        });
       }
     };
 }
