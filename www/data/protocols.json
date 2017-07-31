@@ -15,7 +15,7 @@
 			},
 			{
 				"prioirty": 2,
-				"message": "Do you want to confirm activation of code yellow",
+				"message": "Do you want to confirm activation of code yellow ?",
 				"stepId": "ACTIVATE_CODE"
 			}
 			]
@@ -30,13 +30,18 @@
 			},
 			{
 				"prioirty": 1,
-				"message": "",
+				"message": "Organize debriefing",
 				"stepId": ""
 			},
 			{
 				"prioirty": 2,
-				"message": "",
+				"message": "Ensure documentation",
 				"stepId": ""
+			},
+			{
+				"prioirty": 3,
+				"message": "Update Highest Authority of the hospital about magnitude of incident on time to time basis",
+				"stepId": "LAST_STEP"
 			}
 			]
 		},
@@ -59,9 +64,9 @@
 				"stepId": ""
 			},
 			{
-				"prioirty": 1,
+				"prioirty": 3,
 				"message": "Arrange for extra nursing and nurse aid staff",
-				"stepId": ""
+				"stepId": "LAST_STEP"
 			}
 			]
 		},
@@ -70,13 +75,23 @@
 			"state":"disaster_phase",
 			"actions":[{
 				"prioirty": 0,
-				"message": "",
+				"message": "Report to Command Centre",
 				"stepId": ""
 			},
 			{
 				"prioirty": 1,
-				"message": "",
+				"message": "Update the Incident command officer regarding stock of medication available according to the disasters.",
 				"stepId": ""
+			},
+			{
+				"prioirty": 2,
+				"message": "Contact drug suppliers who can provide emergency supplies quickly.",
+				"stepId": ""
+			},
+			{
+				"prioirty": 3,
+				"message": "have a runner to deliver required medications to respective areas",
+				"stepId": "LAST_STEP"
 			}
 			]
 		},
@@ -90,8 +105,28 @@
 			},
 			{
 				"prioirty": 1,
-				"message": "",
+				"message": "Keep the emergency physicians on duty and call for back up emergency physicians",
 				"stepId": ""
+			},
+			{
+				"prioirty": 2,
+				"message": "Call the paediatric 1st on call to cover the paediatric section",
+				"stepId": ""
+			},
+			{
+				"prioirty": 3,
+				"message": "Call Surgical and Orthopaedics 1st and 2nd on call",
+				"stepId": ""
+			},
+			{
+				"prioirty": 4,
+				"message": "Call Medical 2nd on call and Anaesthesia 1st on call",
+				"stepId": ""
+			},
+			{
+				"prioirty": 5,
+				"message": "Call Obstetrics and Gynaecology 2nd on call",
+				"stepId": "LAST_STEP"
 			}
 			]
 		},
@@ -126,12 +161,7 @@
 			{
 				"prioirty": 5,
 				"message": "Divert attenders to Main Lobby area",
-				"stepId": ""
-			},
-			{
-				"prioirty": 6,
-				"message": "",
-				"stepId": ""
+				"stepId": "LAST_STEP"
 			}
 			]
 		}

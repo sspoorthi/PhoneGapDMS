@@ -9,6 +9,7 @@ export   function rulesNavController($scope,appService, $location) {
     $scope.protocolActions = {};
     $scope.user = appService.userName;
     $scope.role = appService.userRole;
+    $scope.disableNext = false;
     function init(){
       console.log(appService.getRuleObject());
       $scope.protocolActions = appService.getRuleObject().actions;
@@ -47,9 +48,9 @@ export   function rulesNavController($scope,appService, $location) {
               //populateRules();
               //$location.path('/Rules');
           }
-
-
-
+        } else if (angular.equals($scope.protocolActions[$scope.ruleNum].stepId,"LAST_STEP")) {
+            $scope.ruleText = "You are done with all the actions. Please wait for further commands...";
+            $scope.disableNext = true;
         }
     }
     function showPreviousRule(){
