@@ -2,6 +2,7 @@
 export   function appService($http){
 "ngInject";
   var ruleObject = {};
+  var state = "default";
     return{
         validateLogin: (userData) => {
          return $http.get('././data/users.json').then((res) => {

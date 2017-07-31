@@ -1,18 +1,21 @@
-<h3>Report Incident</h3>
-<div class="input-group">
-  <label>Incident</label>
-  <input type="text" class="form-control" placeholder="Enter incident" ng-model="incident">
+<div>
+<h3 class="text-center">Report Incident</h3>
+<div class="container">
+  <form class="form-signin">
+    Incident<input type="text" class="form-control col-xs-12" placeholder="Enter incident" ng-model="incident" style="margin-bottom: 20px;">
+    <br>
+    Location
+    <input type="text" class="form-control" placeholder="Enter location" ng-model="incidentLocation" style="margin-bottom: 20px;">
+    Description
+    <br>
+    <textarea placeholder="Enter description" required ng-model="incidentDescription" rows="5" class="col-xs-12 form-control" style="margin-bottom: 20px;"></textarea>
+    <br>
+    <button type="submit" class="btn btn-success btn-block" ng-click="reportIncident()" style="margin-bottom: 20px;">Report</button>
+  </form>
+
+  <ul class="list-inline button-bar" style="margin-left:0">
+    <li class="tile tile-orange glyphicon glyphicon-home col-xs-3" style="padding-top:10px" ng-click="goToHome()"><h4 style:"color:white">Home</h4></li>
+    <li class="tile tile-pumpkin glyphicon glyphicon-remove col-xs-3"><h4 style:"color:white">Exit</h4></li>
+  </ul>
 </div>
-<br>
-<div class="input-group">
-  <label>Description</label>
-  <br>
-  <textarea placeholder="Enter description" ng-model="incidentDescription" rows="5" cols="50"></textarea>
 </div>
-<br>
-<div class="input-group">
-  <label>Location</label>
-  <input type="text" class="form-control" placeholder="Enter location" ng-model="incidentLocation">
-</div>
-<br>
-<button type="submit" class="btn btn-success" ng-click="reportIncident()">Report</button>

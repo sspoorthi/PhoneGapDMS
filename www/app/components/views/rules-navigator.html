@@ -1,9 +1,17 @@
-<!-- <div class="input-group">
-    <span class="input-group-addon btn btn-primary glyphicon glyphicon-arrow-left" ng-click="showPreviousRule()"> </span>
-    <textarea class="form-control custom-control" rows="12" style="resize:none" readonly ng-model="ruleText" ></textarea>
-    <span class="input-group-addon btn btn-primary glyphicon glyphicon-arrow-right" ng-click="showNextRule()"></span>
-</div> -->
-<div class="jumbotron">
-  <h3 class="protocol-display">{{ruleText}}</h3>
-  <a class="btn btn-primary btn-lg btn-block glyphicon glyphicon-menu-right" ng-click="showNextRule()"></a>
+<div>
+  <div style="color: #999;">
+    <label class="col-xs-4">Hi {{user}}</label>
+    <label class="col-xs-4 col-xs-offset-3">{{role}}</label>
+  </div>
+  <br>
+  <div class="container jumbotron">
+    <h3 class="protocol-display">{{ruleText}}</h3>
+    <a class="btn btn-primary btn-lg btn-block" ng-click="showNextRule()" style="margin-top:10px"><h3>Next</h3></a>
+  </div>
+
+  <ul class="list-inline button-bar" style="margin-left:0">
+    <li class="tile tile-orange glyphicon glyphicon-home" style="padding-top:10px" ng-click="goToHome()"><h4 style:"color:white">Home</h4></li>
+    <li class="tile tile-pumpkin glyphicon glyphicon-remove"><h4 style:"color:white">Exit</h4></li>
+  </ul>
+
 </div>

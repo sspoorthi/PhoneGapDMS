@@ -1,14 +1,14 @@
-<section class="container">
-	<h4 class="text-center">Disaster Management System</h4>
-	  <section class="login-form">
-			<form name="login" ng-submit="doLogin()" role="login">
+<div>
+	<h3 class="text-center">Disaster Management System</h3>
+	  <div class="container">
+			<form name="login" ng-submit="doLogin()" role="login" class="form-signin">
 				<!--<label>Username</label>-->
-				<input type="text" placeholder="Enter username" ng-model="username" required class="form-control" />
+				<input type="text" placeholder="Enter username" ng-model="username" required class="form-control col-xs-12" style="margin-bottom:10px"/>
 
 			<!--	<label>Password</label> -->
-				<input type="password" placeholder="Enter password" ng-model="password" required class="form-control" />
+				<input type="password" placeholder="Enter password" ng-model="password" required class="form-control col-xs-12" style="margin-bottom:10px"/>
 				<br>
-				<button type="submit" name="go" class="btn btn-success">Sign in</button>
+				<button type="submit" name="go" class="btn btn-primary btn-block">Sign in</button>
 			</form>
-		</section>
-	</section>
+		</div>
+</div>

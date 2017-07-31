@@ -5,9 +5,11 @@ export   function homeController($scope,$location,appService) {
 
     $scope.reportIncident = reportIncident;
     $scope.appService=appService;
+    $scope.user = $scope.appService.userName;
+    $scope.role = $scope.appService.userRole;
     function populateRules(){
-//      $scope.appService.state = "incident_reported";
-      $scope.appService.state = "disaster_phase";
+    //  $scope.appService.state = "incident_reported";
+//      $scope.appService.state = "disaster_phase";
         appService.getRules($scope.appService.userRole, $scope.appService.state).then(res=>{
             let rulesObj={};
             $scope.rulesActions = res.actions;
@@ -32,7 +34,8 @@ export   function homeController($scope,$location,appService) {
         $scope.appService.incident = $scope.incident;
         $scope.appService.incidentDescription = $scope.incidentDescription;
         $scope.appService.incidentLocation = $scope.incidentLocation;
-        if($scope.appService.userRole == "admin") {
+        $scope.appService.state = "incident_reported";
+        if($scope.appService.userRole == "incident_commander") {
             var title = "ALERT";
             var message = "Incident: " + $scope.appService.incident + "\n Incident Description: " + $scope.appService.incidentDescription
                 + "\n Incident location:" + $scope.appService.incidentLocation;
@@ -43,7 +46,8 @@ export   function homeController($scope,$location,appService) {
 
             function ack() {
                 console.log("Acknowledged!");
-                $location.path('/Rules');
+                populateRules();
+                //$location.path('/Rules');
             }
         }
 

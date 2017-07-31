@@ -1,16 +1,23 @@
-<div class='col-xs-12 button-wrapper'>
-  <button type="button" class="btn btn-lg col-xs-12">
+<div class='col-xs-12'>
+  <h4>
+    <label class="col-xs-4">Hi {{user}}</label>
+    <label class="col-xs-4 col-xs-offset-3">{{role}}</label>
+  </h4>
+
+  <!-- <button type="button" class="btn btn-lg col-xs-12">
     <span class="glyphicon glyphicon-user pull-left" ></span>
-    Add Users</button>
-  <button type="button" class="btn btn-default" ng-click="showIncidentForm()">Report Incident</button>
-  <button type="button" class="btn btn-primary">Primary</button>
+    Add Users</button> -->
+  <button type="button" class="tile col-xs-12 tile-teal" ng-click="showIncidentForm()">
+    <span class="glyphicon glyphicon-pencil"></span><h3>Report Incident</h3>
+  </button>
+  <!--<button type="button" class="btn btn-primary">Primary</button>
   <button type="button" class="btn btn-success">Success</button>
   <button type="button" class="btn btn-info">Info</button>
-  <button type="button" class="btn btn-warning">Warning</button>
-  <button class="btn btn-lg btn-danger col-xs-12" ng-click="populateRules()">
-    <span class="glyphicon glyphicon-tasks pull-left"></span>Show Rules
+  <button type="button" class="btn btn-warning">Warning</button> -->
+  <button class="tile col-xs-12 tile-orange" ng-click="populateRules()">
+    <span class="glyphicon glyphicon-tasks"></span><h3>Show Rules</h3>
   </button>
-  <button class="btn btn-lg btn-success col-xs-12">
-    <span class="glyphicon glyphicon-earphone pull-left"></span> Call Us
+  <button class="tile col-xs-12">
+    <span class="glyphicon glyphicon-earphone"></span><h3>Directory</h3>
 </button>
 </div>
