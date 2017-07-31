@@ -1,23 +1,26 @@
 <div class='col-xs-12'>
-  <h4>
-    <label class="col-xs-4">Hi {{user}}</label>
-    <label class="col-xs-4 col-xs-offset-3">{{role}}</label>
-  </h4>
+  <div style="color: #999;">
+    <label class="col-xs-6" style="font-weight: normal;">Hi {{user}} you are logged-in as</label>
+    <label class="col-xs-4 col-xs-offset-1">{{role}}</label>
+  </div>
 
   <!-- <button type="button" class="btn btn-lg col-xs-12">
     <span class="glyphicon glyphicon-user pull-left" ></span>
     Add Users</button> -->
   <button type="button" class="tile col-xs-12 tile-teal" ng-click="showIncidentForm()">
-    <span class="glyphicon glyphicon-pencil"></span><h3>Report Incident</h3>
+    <span class="glyphicon glyphicon-pencil" style="margin-top: 10px;margin-bottom: 0;"></span><h3 style="margin-top: 0;">Report Incident</h3>
   </button>
   <!--<button type="button" class="btn btn-primary">Primary</button>
   <button type="button" class="btn btn-success">Success</button>
   <button type="button" class="btn btn-info">Info</button>
   <button type="button" class="btn btn-warning">Warning</button> -->
   <button class="tile col-xs-12 tile-orange" ng-click="populateRules()">
-    <span class="glyphicon glyphicon-tasks"></span><h3>Show Rules</h3>
+    <span class="glyphicon glyphicon-tasks" style="margin-top: 10px;margin-bottom: 0;"></span><h3 style="margin-top: 0;">Show Rules</h3>
   </button>
   <button class="tile col-xs-12">
-    <span class="glyphicon glyphicon-earphone"></span><h3>Directory</h3>
-</button>
+    <span class="glyphicon glyphicon-earphone" style="margin-top: 10px;margin-bottom: 0;"></span><h3 style="margin-top: 0;">Directory</h3>
+  </button>
+  <button class="tile col-xs-12 tile-pumpkin" ng-click="showSwitchRoleForm()">
+    <span class="glyphicon glyphicon-user" style="margin-top: 10px;margin-bottom: 0;"></span><h3 style="margin-top: 0;">Switch Role</h3>
+  </button>
 </div>

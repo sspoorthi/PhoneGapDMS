@@ -13,7 +13,6 @@ export   function rulesNavController($scope,appService, $location) {
       console.log(appService.getRuleObject());
       $scope.protocolActions = appService.getRuleObject().actions;
       $scope.ruleNum = 0;
-      //$scope.ruleText = "Check with local authorities to verify the disaster and obtain additional information.";
       navigateRule($scope.ruleNum);
     }
     function navigateRule(ruleNum){
@@ -28,7 +27,29 @@ export   function rulesNavController($scope,appService, $location) {
         } else if(angular.equals($scope.protocolActions[$scope.ruleNum].stepId,"ACTIVATE_CODE")){
           // trigger disaster_phase activation...
           // send broadcast msg to all
-          appService.state = "disaster_phase";
+          var title = "ALERT";
+          var message = "Confirm activation of CODE YELLOW. This will now activate disaster phase.";
+          var buttonName = "Confirm";
+          navigator.notification.confirm(message, confirmDisasterPhase, title, buttonName);
+
+          function confirmDisasterPhase() {
+              console.log("disaster_phase!");
+              appService.state = "disaster_phase";
+              appService.getRules(appService.userRole, appService.state).then(res=>{
+                  /*let rulesObj={};
+                  $scope.rulesActions = res.actions;
+                  let tempRulesObj= res.actions;
+                  $location.path('/Rules');*/
+                  $scope.protocolActions = res.actions;
+                  $scope.ruleNum = 0;
+                  navigateRule($scope.ruleNum);
+              });
+              //populateRules();
+              //$location.path('/Rules');
+          }
+
+
+
         }
     }
     function showPreviousRule(){

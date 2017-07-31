@@ -34,7 +34,7 @@
 }
 
 .tile{
-    height:100px;
+    height:80px;
     float:left;
     margin:0 5px 0 0;
     padding:2px;
@@ -44,7 +44,7 @@
     z-index: 1;
     border: 4px whitesmoke solid;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .body-format{

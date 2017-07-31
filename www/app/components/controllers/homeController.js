@@ -2,27 +2,19 @@ export   function homeController($scope,$location,appService) {
 "ngInject";
     $scope.populateRules = populateRules;
     $scope.showIncidentForm = showIncidentForm;
-
+    $scope.showSwitchRoleForm = showSwitchRoleForm;
     $scope.reportIncident = reportIncident;
+    $scope.switchRole = switchRole;
+    $scope.goToHome = goToHome;
     $scope.appService=appService;
     $scope.user = $scope.appService.userName;
     $scope.role = $scope.appService.userRole;
     function populateRules(){
-    //  $scope.appService.state = "incident_reported";
-//      $scope.appService.state = "disaster_phase";
         appService.getRules($scope.appService.userRole, $scope.appService.state).then(res=>{
             let rulesObj={};
             $scope.rulesActions = res.actions;
             let tempRulesObj= res.actions;
             $location.path('/Rules');
-  //          rulesNavController.init();
-            /*for(let i=0;i<tempRulesObj.length;i++){
-                if(angular.equals(appService.userRole,tempRulesObj[i].role)){
-                    rulesObj= angular.extend(rulesObj,tempRulesObj[i].rules);
-                    $scope.appService.rulesObj=rulesObj;
-                    break;
-                }
-            } */
         });
     }
 
@@ -45,11 +37,31 @@ export   function homeController($scope,$location,appService) {
             navigator.notification.beep(times);
 
             function ack() {
-                console.log("Acknowledged!");
+                //console.log("Acknowledged!");
                 populateRules();
-                //$location.path('/Rules');
             }
         }
 
+    }
+
+    function showSwitchRoleForm() {
+      $location.path('/SwitchRole');
+    }
+
+    function goToHome() {
+      $location.path('/Home');
+    }
+
+    function switchRole() {
+      console.log($scope.newRole);
+      $scope.appService.userRole = $scope.newRole;
+      var title = "ALERT";
+      var message = "Your role has been changed to: " + $scope.appService.userRole;
+      var buttonName = "OK";
+      navigator.notification.alert(message, navigate, title, buttonName);
+      function navigate() {
+          console.log($scope.appService.userRole);
+          goToHome();
+      }
     }
 }

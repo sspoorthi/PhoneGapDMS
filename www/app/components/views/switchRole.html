@@ -1,0 +1,21 @@
+<div>
+  <h3 class="text-center">Switch Role</h3>
+  <div class="container">
+    <form class="form-signin">
+      Switch role to:
+      <br>
+      <input type="radio" name="newRole" value="incident_commander" ng-model="newRole"> Incident Commander<br>
+      <input type="radio" name="newRole" value="chief_nursing_officer" ng-model="newRole"> Chief Nursing Officer<br>
+      <input type="radio" name="newRole" value="Pharmacy_HOD" ng-model="newRole"> Pharmacy HOD<br>
+      <input type="radio" name="newRole" value="ER_HOD" ng-model="newRole"> ER HOD<br>
+      <input type="radio" name="newRole" value="security_HOD" ng-model="newRole"> Security HOD<br>
+
+      <button type="submit" class="btn btn-success btn-block" ng-click="switchRole()" style="margin-bottom: 20px;margin-top: 20px;">Switch</button>
+    </form>
+
+    <!--<ul class="list-inline button-bar" style="margin-left:0">
+      <li class="tile tile-orange glyphicon glyphicon-home col-xs-3" style="padding-top:10px" ng-click="goToHome()"><h4 style:"color:white">Home</h4></li>
+      <li class="tile tile-pumpkin glyphicon glyphicon-remove col-xs-3"><h4 style:"color:white">Exit</h4></li>
+    </ul> -->
+  </div>
+</div>
