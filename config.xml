@@ -12,4 +12,5 @@
     <plugin name="cordova-plugin-dialogs" spec="^1.3.3" />
     <engine name="android" spec="~6.2.3" />
     <icon src="launcher.png" />
+    <plugin name="call-number" spec="https://github.com/Rohfosho/CordovaCallNumberPlugin.git" />
 </widget>

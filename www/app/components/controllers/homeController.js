@@ -6,9 +6,11 @@ export   function homeController($scope,$location,appService) {
     $scope.reportIncident = reportIncident;
     $scope.switchRole = switchRole;
     $scope.goToHome = goToHome;
+    $scope.getContacts = getContacts;
     $scope.appService=appService;
     $scope.user = $scope.appService.userName;
     $scope.role = $scope.appService.userRole;
+    $scope.contacts = $scope.appService.contacts;
     function populateRules(){
         appService.getRules($scope.appService.userRole, $scope.appService.state).then(res=>{
             let rulesObj={};
@@ -63,5 +65,24 @@ export   function homeController($scope,$location,appService) {
           console.log($scope.appService.userRole);
           goToHome();
       }
+    }
+
+    function getContacts() {
+        appService.getContacts().then(res => {
+            $scope.appService.contacts = res;
+            $location.path('/Contacts');
+        });
+    }
+
+    $scope.makeCall = function(number) {
+        window.plugins.CallNumber.callNumber(onSuccess, onError, number, true);
+
+        function onSuccess(result){
+            console.log("Success:"+result);
+        }
+
+        function onError(result) {
+            console.log("Error:"+result);
+        }
     }
 }

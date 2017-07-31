@@ -1,0 +1,22 @@
+{
+    "contactList":[
+        {
+            "id":0,
+            "name":"State DM contact authority",
+            "phone": "9880963533",
+            "email":"secy.dm@gmail.com"
+        },
+        {
+            "id":1,
+            "name":"Karnataka State Fire & Emergency Services",
+            "phone": "101",
+            "email":"gowtham.karanam@gmail.com"
+        },
+        {
+          "id":2,
+          "name":"Bangalore City Police",
+          "phone":"100",
+          "email":"teast123@gmail.com"
+        }
+    ]
+}

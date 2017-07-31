@@ -24,6 +24,10 @@ export function config($routeProvider, $locationProvider) {
             templateUrl: 'app/components/views/switchRole.html',
             controller: homeController
         })
+        .when('/Contacts', {
+            templateUrl: 'app/components/views/contacts.html',
+            controller: homeController
+        })
         .otherwise({
             redirectTo: '/Login'
         });
