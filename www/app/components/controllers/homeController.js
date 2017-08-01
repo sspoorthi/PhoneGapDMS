@@ -78,10 +78,12 @@ export   function homeController($scope,$location,appService) {
         window.plugins.CallNumber.callNumber(onSuccess, onError, number, true);
 
         function onSuccess(result){
+            $location.path('/Contacts');
             console.log("Success:"+result);
         }
 
         function onError(result) {
+            $location.path('/Contacts');
             console.log("Error:"+result);
         }
     }
